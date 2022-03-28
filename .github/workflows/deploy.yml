@@ -10,7 +10,7 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - name: Linux Deploy
-       run: base .github/workflows/test.sh
+       run: bash .github/workflows/test.sh
        env:
         DEV_PRIVATE_KEY: ${{ secrets.DEV_PRIVATE_KEY }}
         DEV_IDENTITY: ${{ secrets.DEV_IDENTITY }}
