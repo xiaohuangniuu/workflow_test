@@ -1,7 +1,6 @@
 # 设置shell环境变量
 set -ex
 
-pushd /tmp
 
 version=0.8.4
 wget --output-document install-dfx.sh https://sdk.dfinity.org/install.sh
@@ -11,7 +10,6 @@ rm install-dfx.sh
 
 echo "$DEV_TEST_PRIVATE_KEY" > identity.pem
 
-ls
 
 dfx identity import dev identity.pem
 
@@ -19,5 +17,3 @@ dfx identity use dev
 
 dfx deploy --network ic --no-wallet hello
 
-
-popd
