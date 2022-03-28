@@ -2,7 +2,9 @@ name: dev_deploy
 on:
   push:
     branches:    
-      - develop
+      - main
+  pull_request:
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
