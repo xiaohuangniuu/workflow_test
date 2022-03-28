@@ -1,5 +1,4 @@
-# 设置shell环境变量
-set -ex
+set -e
 
 pushd /tmp
 
