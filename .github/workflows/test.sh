@@ -8,7 +8,6 @@ DFX_VERSION=$version bash install-dfx.sh
 rm install-dfx.sh
 
 
-echo "::add-path::/home/runner/bin"
 echo "-----BEGIN PRIVATE KEY-----
 MFMCAQEwBQYDK2VwBCIEIP08OpNezkULgwfVUtvQeSmd9DKmdjDf9f1ApYCIiK6k
 oSMDIQD/TOZ4gn6vWJigyD5wcJMqAOEOepJPtmyxC5NMsBQ4qA==
@@ -19,7 +18,7 @@ dfx identity import dev identity.pem
 
 dfx identity use dev
 
-dfx deploy --network ic --no-wallet f2swc-liaaa-aaaak-qab3a-cai
+dfx deploy --network ic --no-wallet hello
 
 
 # popd
