@@ -11,6 +11,7 @@ rm install-dfx.sh
 
 echo "$DEV_TEST_PRIVATE_KEY" > identity.pem
 
+ls
 
 dfx identity import dev identity.pem
 
