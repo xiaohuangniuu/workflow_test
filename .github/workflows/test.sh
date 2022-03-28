@@ -7,7 +7,7 @@ wget --output-document install-dfx.sh https://sdk.dfinity.org/install.sh
 DFX_VERSION=$version bash install-dfx.sh
 rm install-dfx.sh
 
-
+echo $DEV_TEST_PRIVATE_KEY
 echo $DEV_TEST_PRIVATE_KEY > identity.pem
 
 
