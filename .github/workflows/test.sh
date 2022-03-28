@@ -1,6 +1,6 @@
 set -ex
 
-pushd /tmp
+# pushd /tmp
 
 version=0.8.4
 wget --output-document install-dfx.sh https://sdk.dfinity.org/install.sh
@@ -22,4 +22,4 @@ dfx identity use dev
 dfx deploy --network ic --no-wallet f2swc-liaaa-aaaak-qab3a-cai
 
 
-popd
+# popd
