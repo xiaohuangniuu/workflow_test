@@ -1,0 +1,22 @@
+{
+  "canisters": {
+    "hello": {
+      "main": "main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "localhost:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
