@@ -8,7 +8,6 @@ DFX_VERSION=$version bash install-dfx.sh < <(yes Y)
 rm install-dfx.sh
 
 
-echo "::add-path::/home/runner/bin"
 echo $DEV_IDENTITY > identity.pem
 
 dfx identity import dev identity.pem
