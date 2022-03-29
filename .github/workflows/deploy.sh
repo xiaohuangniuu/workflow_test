@@ -1,6 +1,5 @@
 set -ex
 
-pushd /tmp
 
 version=0.8.4
 wget --output-document install-dfx.sh https://sdk.dfinity.org/install.sh
@@ -8,7 +7,7 @@ DFX_VERSION=$version bash install-dfx.sh < <(yes Y)
 rm install-dfx.sh
 
 
-echo $DEV_IDENTITY > identity.pem
+echo "$DEV_IDENTITY" > identity.pem
 
 dfx identity import dev identity.pem
 
@@ -30,5 +29,3 @@ dfx canister --network ic --no-wallet call $DEV_SHIKU_CANISTERID init
 
 #添加createCollection白名单（添加批量mint容器）
 dfx canister --network ic --no-wallet call $DEV_SHIKU_CANISTERID addCreator_whitelist '(vec {principal "y4lix-jhuep-z75ri-5ujrs-jb4w2-wjypw-quotd-romgu-t6f6e-qqy4e-kae"})'
-
-popd
