@@ -1,0 +1,25 @@
+name: tag_deploy
+on:
+  push:
+    tags: 
+      - releases/[1-9]+.[0-9]+.[0-9]+
+  # pull_request:
+  #   branches:
+  #     - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+     - uses: actions/checkout@v3
+     - name: Linux Deploy
+       run: bash .github/workflows/tag_deploy.sh
+       env:
+        DEV_PRIVATE_KEY: ${{ secrets.DEV_PRIVATE_KEY }}
+        DEV_IDENTITY: ${{ secrets.DEV_IDENTITY }}
+        DEV_LAUNCHPAD_CANISTERID: ${{ secrets.DEV_LAUNCHPAD_CANISTERID }}
+        DEV_OWNER_PRINCIPAL: ${{ secrets.DEV_OWNER_PRINCIPAL }}
+        DEV_POINT_CANISTERID: ${{ secrets.DEV_POINT_CANISTERID }}
+        DEV_RECORD_CANISTERID: ${{ secrets.DEV_RECORD_CANISTERID }}
+        DEV_SHIKU_CANISTERID: ${{ secrets.DEV_SHIKU_CANISTERID }}
+        DEV_TEST_CANISTERID: ${{ secrets.DEV_TEST_CANISTERID }}
+        DEV_TEST_PRIVATE_KEY: ${{ secrets.DEV_TEST_PRIVATE_KEY }}

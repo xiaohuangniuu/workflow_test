@@ -3,16 +3,16 @@ on:
   push:
     branches:    
       - develop
-  pull_request:
-    branches:
-      - develop
+  # pull_request:
+  #   branches:
+  #     - develop
 jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
      - uses: actions/checkout@v3
      - name: Linux Deploy
-       run: bash .github/workflows/test.sh
+       run: bash .github/workflows/dev_deploy.sh
        env:
         DEV_PRIVATE_KEY: ${{ secrets.DEV_PRIVATE_KEY }}
         DEV_IDENTITY: ${{ secrets.DEV_IDENTITY }}
