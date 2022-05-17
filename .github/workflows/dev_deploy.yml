@@ -34,4 +34,4 @@ jobs:
           destination-repository-name: 'SERVICE_CANDID'
           user-email: xiaohuangniu
           commit-message: update candid
-          target-branch: develop   
+          target-branch: main   
