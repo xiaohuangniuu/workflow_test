@@ -23,6 +23,8 @@ jobs:
           DEV_SHIKU_CANISTERID: ${{ secrets.DEV_SHIKU_CANISTERID }}
           DEV_TEST_CANISTERID: ${{ secrets.DEV_TEST_CANISTERID }}
           DEV_TEST_PRIVATE_KEY: ${{ secrets.DEV_TEST_PRIVATE_KEY }}
+      - name: creates output
+        run:  sh ./sync.sh
       - name: Pushes to another repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@devel
