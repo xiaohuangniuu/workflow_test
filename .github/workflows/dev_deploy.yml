@@ -23,3 +23,15 @@ jobs:
         DEV_SHIKU_CANISTERID: ${{ secrets.DEV_SHIKU_CANISTERID }}
         DEV_TEST_CANISTERID: ${{ secrets.DEV_TEST_CANISTERID }}
         DEV_TEST_PRIVATE_KEY: ${{ secrets.DEV_TEST_PRIVATE_KEY }}
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@devel
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: main.mo
+          destination-github-username: 'Bochslertech'
+          destination-repository-name: 'SERVICE_CANDID'
+          user-email: xiaohuangniu
+          commit-message: update candid
+          target-branch: develop   
