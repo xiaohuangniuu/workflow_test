@@ -31,7 +31,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: main.mo
+          source-directory: output
           destination-github-username: 'Bochslertech'
           destination-repository-name: 'SERVICE_CANDID'
           user-email: xiaohuangniu
